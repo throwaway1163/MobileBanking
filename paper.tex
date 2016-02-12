@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+\usepackage{researchPaper}
+
+\graphicspath{{images/}}
+
+\bibliography{cellphoneBankingReport.bib}
+
+\begin{document}
+
+%Arguments #1=title #2=authors
+\newcommand{\titlesection}[2]
+{
+    \title{#1}
+    \lhead{Benjamin Ojeda}
+    \rhead{#1}
+    \author{#2}
+    \date{\today}
+    \maketitle
+}
+
+%Arguments #1=image #2=location #3=width #4=caption #5=citation
+\newcommand{\wrapfig}[5]
+{
+    \begin{wrapfigure}{#2}{#3\textwidth}
+        \label{fig:#1}
+        \vspace{-22pt}
+        \begin{tcolorbox}[left=1mm,right=1mm,top=1mm,bottom=1mm,colback=blue!6!white,boxrule=0mm,colframe=blue!75!black,arc=0pt,outer arc=0pt]
+            \centering
+            \includegraphics[width=\textwidth]{#1}
+            \vspace{-30pt}
+            \caption{#4\protect\footnotemark}
+            %\vspace{-18pt}
+        \end{tcolorbox}
+        \vspace{-22pt}
+    \end{wrapfigure}
+    \footnotetext{#5}
+}
+
+%Arguments #1=image #2=width #3=caption #4=citation
+\newcommand{\fig}[4]
+{
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[scale=#2]{#1}
+        \caption{#3\footnotemark}
+        \label{fig:#1}
+    \end{figure}
+    \footnotetext{#4}
+}
+
+\titlesection{The Impact of Mobile Banking on\\ Poverty in the Third World}{Benjamin Ojeda}
+
+The meteoric rise of mobile phones across the globe in recent years has had a tremendous social and economic impact, reaching the hands of people in even the poorest parts of the world.
+The pace of this change has been dramatic, especially in places like Africa which had little telecommunications infrastructure to begin with in the 1990s.\autocite[4]{asongu2015impact}
+Today 60\% of Africa has mobile coverage and mobile phones outnumber landlines ten to one.\autocite[4]{asongu2015impact}
+
+Among the most interesting innovations that have been made possible by this explosion of connectivity is mobile banking.
+
+However, there remains no clear evidence linking the growing mobile phone penetration with macroeconomic gains.
+
+
+In Kenya for example, the mobile-phone operator Safaricom has built a tremendous mobile banking system around SMS messaging.\autocite{economist2013mobileBanking}
+The system has 19 million subscribers, an astonishing figure considering that there are only 43 million people in all of Kenya.\autocite{economist2013mobileBanking}
+It allows its users to access basic financial resources in order to pay bills or take out small loans and generates revenue from transaction fees on cash transfers and withdrawals.\autocite{economist2013mobileBanking}
+This would not have been possible just a few years ago considering that fewer than 3\% of Kenyan households had a telephone and one in a thousand had mobile phone service in the late nineties, today 93\% of Kenyan households own a mobile phone.\autocite[5]{asongu2015impact}
+
+Most users of mobile banking in the developing world use these services in order to access three basic banking services, store money in an account, make deposits and withdrawals, and transfer it between accounts.\autocite[6]{asongu2015impact}
+
+Recent research conducted by Simplice A. Asongu of the African Governance and Development Institute suggest that the rise of mobile banking has had a measurable positive impact upon poverty.\autocite[14]{asongu2015impact}
+The financial management tools that mobile banking has facilitated allow even poor families to save money and to access these savings during times of emergency, which tend to be an important driver of poverty.\autocite[14]{asongu2015impact}
+
+
+
+\singlespacing
+\nocite{*}
+\printbibliography
+
+\end{document}
